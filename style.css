@@ -1,0 +1,20 @@
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+:root{
+    --dark-blue: #1d1e35;
+    --soft-red: #f47c57;
+    --soft-violet: #af67e9;
+    --soft-blue: #6565e7; 
+    --very-dark-grayish-blue: #787887;
+    --dark-grayish-blue: #787887;
+    --light-grayish-blue: #e7e7e9;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Khumb Sans, sans-serif ;
+    font-size: 12px;
+}
