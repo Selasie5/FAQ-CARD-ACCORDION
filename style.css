@@ -15,6 +15,60 @@
     box-sizing: border-box;
 }
 body{
+    background: linear-gradient(180deg, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
     font-family:Khumb Sans, sans-serif ;
     font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 100vh;
+}
+.container
+{
+    width: 920px;
+    height: 500px;
+    display: grid;
+    background-color: var(--light-grayish-blue);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    border-radius: 23px;
+}.images
+{
+    background-image: url(images/bg-pattern-desktop.svg);
+    overflow: hidden;
+    background-size:auto;
+    background-position: 100%;
+    /* border: 2px solid black; */
+}
+.images img{
+   
+}
+.box
+{
+    position: absolute;
+    top: 43.7%;
+    left: 14%;
+    /* border: 3px solid black; */
+}
+.desktop
+{
+ transform: translateX(-16%);
+ padding-block: 4rem;
+}
+.FAQ
+{
+    align-self: center;
+}
+.questions
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 0rem;
+}
+.questions img{
+    width: 0.7vw;
+    height: 0.9vh;
+    margin-right: 6rem;
+    display: inline-flex;
 }
