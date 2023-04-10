@@ -74,7 +74,7 @@ body{
     gap: 0rem;
     margin-top: 2rem;
 }
-.question h3{
+.question{
     font-size: 1rem;
     font-weight: 400;
 }
@@ -92,12 +92,57 @@ body{
 {
     display: none;
 }
-.rotate
+.answer.expanded
+{
+    padding-bottom: 1rem;
+    display: block;
+    max-height: 80px;
+}
+.arrow-down.rotate
 {
     transform: rotate(180deg);
     transition: 0.2s ease-in-out;
 }
-.bold
+.question.bold
 {
     font-weight: bold;
+}
+.question-answers:hover
+{
+    cursor: pointer;
+}
+
+@media  screen and (max-width: 768px) {
+    .container
+    {
+        width: 300px;
+        margin-inline: 0.5rem;
+        padding-inline: 0.6rem;
+        padding-block: 0.5rem;
+        margin-top: 5rem;
+        grid-template-columns: 1fr;
+    }
+    .question 
+    {
+        font-size: 0.8rem;
+        width: 275px;
+    }
+   .images{
+    transform: translateY(-10%);
+    overflow: visible;
+    transform: scale(0.4);
+    background-position-y: 30%;
+    background-position-x: 100%;
+    background-size: cover;
+   }
+   .desktop
+   {
+    position: absolute;
+    transform: translateY(-75%);
+    right: -12%;
+   }
+   .box
+   {
+    transform: translate(-80%, -20%);
+   }
 }

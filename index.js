@@ -1,34 +1,25 @@
 
-    const toggleAnswer=(index)=>
-{
-    var questions=document.querySelectorAll(".question");
-    var answers =document.querySelectorAll(".answer");
-    var dropDowns =document.querySelectorAll(".arrow-down");
-
-    questions.forEach(function(question, i)
+ let questions= document.querySelcectorAll('.question');
+ questions.forEach(function(question)
+ {
+    question.addEventListener('click',()=>
     {
-        if(i === index)
-        {
-            var answer=answers[i];
-            var dropdown =dropDowns[i];
-            var  questionHeader = question.querySelector("h3");
+        let answer= question.nextElementSibling;
+        let dropDown =questions.querySelector('.arrow-down');
+        let allAnswers= document.querySelectorAll('.answer');
+        isExpanded = answer.classList.contains('expanded');
 
-            if (answer.style.display === "block")
-            {
-                answer.style.display="none";
-                dropDowns.classList.remove("rotate");
-                questionHeader.classList.remove("bold");
-            }
-            else{
-                answer.style.display="block";
-                dropDowns.classList.add("rotate");
-                questionHeader.classList.add("bold");
-            }
-        }
-        else{
-            answers[i].style.display="none";
-            dropdown[i].classList.remove("rotate");
-            question[i].querySelector("h3").classList.remove("bold");
-        }
+        allAnswers.forEach((answer) =>
+        {
+            answer.classList.remove('expanded');
+            answer.previousElementSibling.querySelector('.arrow-down').classList.remove('rotate');
+            answer.previousElementSibling.classList.remove('bold');
+        });
+         if (!isExpanded)
+         {
+            answer.classList.add('expanded');
+            dropDown.classList.add('rotate');
+            question.classList.add('bold');
+         }
     })
-}
+ })
