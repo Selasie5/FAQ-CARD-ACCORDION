@@ -1,11 +1,11 @@
 
- let questions= document.querySelcectorAll('.question');
+ let questions= document.querySelectorAll('.question');
  questions.forEach(function(question)
  {
     question.addEventListener('click',()=>
     {
         let answer= question.nextElementSibling;
-        let dropDown =questions.querySelector('.arrow-down');
+        let dropDown =question.querySelector('.arrow-down');
         let allAnswers= document.querySelectorAll('.answer');
         isExpanded = answer.classList.contains('expanded');
 

@@ -90,12 +90,12 @@ body{
 }
 .answer
 {
-    display: none;
+   max-height: 0;
+   overflow: hidden;
 }
 .answer.expanded
 {
     padding-bottom: 1rem;
-    display: block;
     max-height: 80px;
 }
 .arrow-down.rotate
